@@ -1,0 +1,55 @@
+在项目文件夹中打开 PowerShell 或 Git Bash，按顺序执行以下命令：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+步骤1: 确保在正确的目录
+----------------------------------------
+cd "C:\Users\sanelius\Desktop\手机定时播放"
+
+步骤2: 初始化Git仓库
+----------------------------------------
+git init
+
+步骤3: 配置Git用户
+----------------------------------------
+git config user.name "sanelius2"
+git config user.email "sanelius@163.com"
+
+步骤4: 添加所有文件
+----------------------------------------
+git add .
+
+步骤5: 创建提交
+----------------------------------------
+git commit -m "Complete Android Scheduled Audio Player project"
+
+步骤6: 添加远程仓库
+----------------------------------------
+git remote add origin https://github.com/sanelius2/scheduled-audio-player.git
+
+步骤7: 设置主分支
+----------------------------------------
+git branch -M main
+
+步骤8: 推送到GitHub
+----------------------------------------
+git push -u origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+推送时需要输入：
+  Username: sanelius2
+  Password: (粘贴 Personal Access Token)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+如果推送失败，手动创建GitHub仓库：
+
+1. 访问：https://github.com/new
+2. 仓库名：scheduled-audio-player
+3. 设置为：Public
+4. 不要勾选任何选项
+5. 点击：Create repository
+6. 重新执行步骤6-8
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

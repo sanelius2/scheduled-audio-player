@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="任务名称"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="音频文件"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_audio_selected"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_audio" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="开始时间"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="09:00"
+            android:textSize="16sp"
+            android:textColor="?attr/colorPrimary"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="结束时间"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/tvEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="18:00"
+            android:textSize="16sp"
+            android:textColor="?attr/colorPrimary"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="重复类型"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <Spinner
+            android:id="@+id/spinnerRepeatType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:entries="@array/repeat_types" />
+
+        <LinearLayout
+            android:id="@+id/layoutWorkdays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择工作日"
+                android:textSize="14sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:columnCount="4"
+                android:rowCount="2" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSpecificDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="点击选择日期"
+            android:textSize="16sp"
+            android:textColor="?attr/colorPrimary"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchEnabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/enabled"
+            android:checked="true" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLoopPlayback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="循环播放"
+            android:checked="false" />
+
+    </LinearLayout>
+
+</ScrollView>

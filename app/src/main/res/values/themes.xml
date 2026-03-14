@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ScheduledAudioPlayer" parent="Theme.Material3.DayNight">
+        <!-- Primary brand color. -->
+        <item name="android:colorPrimary">@color/md_theme_primary</item>
+        <item name="android:colorPrimaryDark">@color/md_theme_primary</item>
+        <item name="android:colorAccent">@color/md_theme_tertiary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/Widget.Material3.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.Material3.CardView.Elevated</item>
+    </style>
+</resources>

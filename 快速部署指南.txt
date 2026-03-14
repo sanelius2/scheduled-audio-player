@@ -1,0 +1,122 @@
+========================================
+  快速部署到 sanelius2 GitHub账号
+========================================
+
+🎯 最简单的方法（推荐）：
+
+1️⃣ 找到项目文件夹
+   位置：C:\Users\sanelius\Desktop\手机定时播放
+
+2️⃣ 双击运行
+   文件：DEPLOY.bat
+
+3️⃣ 按照提示操作
+   - 选择 Y 删除旧远程仓库
+   - 选择 Y 继续推送
+   - 当提示输入密码时，粘贴 Personal Access Token
+
+========================================
+  Personal Access Token 创建步骤
+========================================
+
+如果还没有 Personal Access Token，请按以下步骤创建：
+
+1. 在浏览器中登录 sanelius2 账号
+   访问：https://github.com/settings/tokens
+
+2. 点击 "Generate new token" → "Generate new token (classic)"
+
+3. 填写：
+   - Note: Scheduled Audio Player
+   - Expiration: No expiration（或选择较长时间）
+   - 勾选：repo（这个最重要）
+
+4. 点击 "Generate token"
+
+5. ⚠️ 重要：立即复制生成的 token
+   - 这个token只会显示一次！
+   - 请保存在安全的地方
+
+========================================
+  推送时的认证信息
+========================================
+
+当 git push 提示输入时：
+
+Username: sanelius2
+Password: (粘贴刚才复制的 Personal Access Token)
+
+⚠️ 注意：
+- Password 不是GitHub密码
+- 必须使用 Personal Access Token
+- 粘贴时不会显示任何字符，直接粘贴后按回车
+
+========================================
+  如果推送失败
+========================================
+
+方案1：手动创建GitHub仓库
+-------------------------
+1. 在浏览器访问：https://github.com/new
+2. 确保登录的是 sanelius2 账号
+3. 仓库名：scheduled-audio-player
+4. 设置为 Public
+5. 不要勾选任何选项（README、gitignore等）
+6. 点击 Create repository
+
+然后在命令行执行：
+git remote add origin https://github.com/sanelius2/scheduled-audio-player.git
+git branch -M main
+git push -u origin main
+
+方案2：查看详细文档
+-------------------------
+打开 REPO_INSTRUCTIONS.md 查看完整步骤和故障排除
+
+========================================
+  验证部署成功
+========================================
+
+推送成功后：
+
+1. 访问仓库：
+   https://github.com/sanelius2/scheduled-audio-player
+
+2. 确认文件已上传
+
+3. 访问 Actions 页面：
+   https://github.com/sanelius2/scheduled-audio-player/actions
+
+4. 等待构建完成（约5-10分钟）
+
+5. 下载 APK：
+   - 点击构建记录
+   - 在页面底部找到 Artifacts
+   - 下载 debug-apk
+   - 解压获得 app-debug.apk
+
+========================================
+  问题排查
+========================================
+
+Q: 提示 "not a git repository"
+A: 确保在项目文件夹内，双击 DEPLOY.bat
+
+Q: 提示 "Authentication failed"
+A: 使用 Personal Access Token，不是GitHub密码
+
+Q: 提示 "Repository not found"
+A: 手动在GitHub创建仓库，见"方案1"
+
+Q: 不知道是否成功
+A: 访问 https://github.com/sanelius2/scheduled-audio-player 查看
+
+========================================
+  开始部署！
+========================================
+
+现在就双击运行 DEPLOY.bat 开始部署！
+
+遇到问题？查看 REPO_INSTRUCTIONS.md
+
+========================================

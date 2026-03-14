@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvTaskName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/switchEnabled"
+            app:layout_constraintBottom_toBottomOf="@+id/switchEnabled"
+            app:layout_constraintStart_toEndOf="@+id/switchEnabled"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            tools:text="任务 1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            style="@style/Widget.Material3.Button.IconButton"
+            app:layout_constraintTop_toTopOf="@+id/switchEnabled"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:drawableStart="@android:drawable/ic_media_play"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/switchEnabled"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="音频: morning_alarm.mp3" />
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:drawableStart="@android:drawable/ic_menu_recent_history"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAudio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvEndTime"
+            app:layout_constraintHorizontal_weight="1"
+            tools:text="开始: 09:00" />
+
+        <TextView
+            android:id="@+id/tvEndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAudio"
+            app:layout_constraintStart_toEndOf="@+id/tvStartTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            tools:text="结束: 18:00" />
+
+        <TextView
+            android:id="@+id/tvRepeatType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:drawableStart="@android:drawable/ic_menu_week"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvStartTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="每日重复" />
+
+        <TextView
+            android:id="@+id/tvLoopPlayback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorPrimary"
+            android:drawableStart="@android:drawable/ic_menu_rotate"
+            android:drawablePadding="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepeatType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="循环播放"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

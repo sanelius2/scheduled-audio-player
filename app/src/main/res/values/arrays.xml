@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="repeat_types">
+        <item>@string/daily</item>
+        <item>@string/workday</item>
+        <item>@string/specific_date</item>
+        <item>@string/once</item>
+    </string-array>
+</resources>
